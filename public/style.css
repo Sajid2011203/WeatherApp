@@ -1,0 +1,48 @@
+.container-fluit{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.left-container{
+  background-color: rgb(211, 253, 212);
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-data-container > img {
+  width: 50%;
+}
+.left-data-container{
+  width: 50%;
+  height: 50%;
+  text-align: center; 
+}
+
+/* right container */
+#right-container{
+  background-color: rgb(141, 250, 142);
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#right-data-container{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  max-width: 40vw;
+}
+.text-left{
+  text-align: left;
+}
+#master-history{
+  display: none;
+}
+
