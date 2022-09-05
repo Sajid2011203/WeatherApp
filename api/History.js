@@ -1,8 +1,10 @@
 const mongoose = require('mongoose')
+const { stringify } = require('querystring')
 const Schema = mongoose.Schema
 
 const HistorySchema = new Schema({
   icon: String,
+  name: String,
   city: String,
   country: String,
   main: String,

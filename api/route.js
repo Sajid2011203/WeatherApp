@@ -9,7 +9,7 @@ route.get('/', (req, res) => {
     .catch(e => {
       console.log(e)
       res.status(500).json({
-      message: 'Error Occurred'
+      message: 'Server Error'
     })
   })
 })
@@ -24,7 +24,7 @@ route.post('/', (req, res) => {
     .catch(e => {
       console.log(e)
       res.status(500).json({
-        message: 'Error Occurred'
+        message: 'Server Error'
       })
   })
 })

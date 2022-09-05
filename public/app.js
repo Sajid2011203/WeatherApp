@@ -34,7 +34,7 @@ window.onload = function () {
     })
     .catch(e => {
       console.log(e);
-      alert('Error Occurred')
+      alert('Error Occurred on get request')
   })
   
   inputCity.addEventListener('keypress', function (e) {
@@ -43,11 +43,11 @@ window.onload = function () {
         getWeather(e.target.value, null, weatherDataObj => {
           e.target.value = ''
           axios.post('/api/history', weatherDataObj)
-            .then(response => {
-              updateHistory(response.data)
+            .then(({data}) => {
+              updateHistory(data)
             })
             .catch(e => {
-              console.log(e)
+              console.log(e.response.data)
               alert('Error Occurred')
             })
         })
@@ -115,7 +115,6 @@ function updateHistory(history) {
     tempHistory.getElementsByClassName('temp')[0].innerText = h.temp
     tempHistory.getElementsByClassName('pressure')[0].innerText = h.pressure
     tempHistory.getElementsByClassName('humidity')[0].innerText = h.humidity
-    
     historyElm.appendChild(tempHistory)
   })
 }
